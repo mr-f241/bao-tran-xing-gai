@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    /* reset css : loại bỏ các kiểu mặc định của trình duyệt */
+    color: #0f172a;
+}
+body{
+    font-size: 0.9rem;
+    display: flex;
+    /* flex-direction : column dùng để xếp các phần tử tù trên xuống thya vì chiều ngang*/
+    flex-direction: column;
+    min-height: 100vh;
+}
+.google-header{
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    display: flex;
+    /* justify-content dùng để tạo khoảng cách giữa các phần tố */
+    justify-content: space-between;
+    /* align-items : center dùng để tạo khoảng cách giữa các phần tố */
+    align-items: center;
+    padding: 10px;
+    /* gap dùng để tạo khoảng cách giữa các phần tố cơ bản */
+    gap: 14px;
+}
+
+.nav-container{  
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.text-link,
+footer a{
+    /* color: inherit dùng để kế thừa màu sắc từ phần tử cha */
+    color: inherit;
+    /* text-decoration: none dùng để loại bỏ gạch chân của link */
+    text-decoration: none;
+}
+.nav-container-second .text-link{
+    display: none;
+}
+.text-link:hover,
+footer a:hover{
+    text-decoration: underline;
+}
+.icon-link{
+    color: inherit;
+    /* 1rem = 16px */
+    font-size: 1rem;
+    text-decoration: none;
+    width: 24px;
+    /*aspect-ratio : Duy trì tỉ lệ hình ảnh, video, hoặc khối vuông mà không cần biết rõ chiều rộng và cao. ví dụ aspect-ratio: 1(chiều rộng)/1(chiều cao) */
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    display: grid;
+    /* place-items : center căn giữa các phần tố */
+    place-items: center;
+}
+.icon-link:hover{
+    background: rgb(247, 242, 242);
+}
+.img-button{
+    /* border : none dùng để loại bỏ viền của button */
+    border: none;
+    /* background: transparent dùng để loại bỏ màu nền của button */
+    background: transparent;
+}
+.img-button img {
+    width: 35px;
+    height: 35px;
+     /* aspect-ratio : Duy trì tỉ lệ hình ảnh, video, hoặc khối vuông mà không cần biết rõ chiều rộng và cao. */
+    aspect-ratio: 1/1;
+    /* border-radius: 50% dùng để tạo hình tròn cho ảnh */
+    border-radius: 50%;
+    /* overflow:
+    +visible : mặc định
+    + hidden : khóa nội dung bị tràn
+    + scroll : tạo thanh cuộn khi nội dung bị tràn kể cả khi không cần thiết
+    + auto : tự động tạo thanh cuộn khi nội dung bị tràn
+    */
+    overflow: hidden;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 1rem;
+}
+.title-text{
+    font-size: 3rem;
+}
+.input-bar{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    border: 1px solid rgba(29, 28, 28, 0.1);
+    max-width: 500px;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+/* hover : được sử dụng để áp dụng các kiểu khi người dùng di chuột qua phần tử 
+focus-winthin */
+/* focus-within : được sử dụng để áp dụng các kiểu khi một phần tử con của phần tử hiện tại nhận được tiêu điểm  nó sẽ giữ nguyên cái được css 
+ví dụ ở đây là hover khi bấm vô nó sẽ dữ nguyên mà ko bị mất đi cái hover*/
+.input-bar:hover,
+.input-bar:focus-within{
+    /* box-shadow : 0 0 5px rgba(r,g,b,a) dùng để tạo bóng đầu tiên là chiều 
+    rộng , chiều cao và màu sắc của bóng */
+    box-shadow: 3px 3px 6px rgba(19, 18, 18, 0.1);
+}
+.input-bar input{
+    flex: 1;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.input-bar div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.input-icon{
+    background-color: transparent;
+    border: none;
+
+}
+.input-icon:hover{
+    /* opacity : 0.8 dùng để giảm độ mờ của phần tử */
+    opacity: 0.8;
+    /* cursor : pointer dùng để thay đổi con trỏ chuột thành hình bàn tay khi di chuột qua phần tử */
+    cursor: pointer;
+}
+
+.button-grid{
+    display: flex;
+    align-self: center;
+    gap: 1rem;
+}
+
+.button-grid button{
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    background: rgb(247, 247, 247);
+    border-radius: 0.5rem;
+}
+.button-grid button:hover{
+    border: 1px solid slategray;
+}
+.language-text{
+    font-size: 0.7rem;
+}
+.language-link{
+    color: blue;
+    text-decoration: none;
+    font-size: 0.7rem;
+}
+.language-link:hover{
+    text-decoration: underline;
+}
+footer{
+    background: rgb(252, 244, 244);
+}
+
+footer >  div{
+    padding: 1rem;
+}
+
+.footer-grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.footer-links{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+@media (min-width:640px){
+    footer{
+
+    }
+}
